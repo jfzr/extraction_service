@@ -1,6 +1,8 @@
 const sqlite3 = require('sqlite3').verbose();
+console.log('This: ' + `${__dirname}\\..\\data\\migration.db`)
+
 // Create a database instance
-const db = new sqlite3.Database('../data/migration.db');
+const db = new sqlite3.Database(`${__dirname}\\..\\data\\migration.db`);
 
 // Create tables if they don't exist
 db.serialize(() => {
